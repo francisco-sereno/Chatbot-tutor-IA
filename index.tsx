@@ -35,6 +35,10 @@ class Chatbot {
     private readonly form: HTMLFormElement;
     private readonly userInput: HTMLInputElement;
     private readonly sendBtn: HTMLButtonElement;
+    private readonly creditsBtn: HTMLButtonElement;
+    private readonly modalOverlay: HTMLElement;
+    private readonly closeModalBtn: HTMLButtonElement;
+
 
     // --- STATE ---
     private chat: Chat | null = null;
@@ -50,11 +54,17 @@ class Chatbot {
         this.form = this.getElement<HTMLFormElement>("#chat-form", this.wrapper);
         this.userInput = this.getElement<HTMLInputElement>("#user-input", this.form);
         this.sendBtn = this.getElement<HTMLButtonElement>(".send-btn", this.form);
+        
+        this.creditsBtn = this.getElement<HTMLButtonElement>('#credits-btn', this.wrapper);
+        this.modalOverlay = this.getElement<HTMLElement>('#credits-modal-overlay');
+        this.closeModalBtn = this.getElement<HTMLButtonElement>('#close-modal-btn', this.modalOverlay);
+
     }
     
     public initialize(): void {
         try {
             this.initializeGemini();
+            this.initializeModalListeners();
             this.form.addEventListener("submit", (event) => this.handleFormSubmit(event));
             this.appendMessage({ text: this.initialBotMessage, sender: "bot" });
         } catch (error) {
@@ -84,6 +94,31 @@ class Chatbot {
                 systemInstruction: systemInstruction,
             }
         });
+    }
+    
+    private initializeModalListeners(): void {
+        this.creditsBtn.addEventListener('click', () => this.openModal());
+        this.closeModalBtn.addEventListener('click', () => this.closeModal());
+        this.modalOverlay.addEventListener('click', (event) => {
+            if (event.target === this.modalOverlay) {
+                this.closeModal();
+            }
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && this.modalOverlay.classList.contains('visible')) {
+                this.closeModal();
+            }
+        });
+    }
+
+    private openModal(): void {
+        this.modalOverlay.classList.add('visible');
+        this.modalOverlay.setAttribute('aria-hidden', 'false');
+    }
+
+    private closeModal(): void {
+        this.modalOverlay.classList.remove('visible');
+        this.modalOverlay.setAttribute('aria-hidden', 'true');
     }
 
     private async getAssistantResponse(promptText: string): Promise<string> {
