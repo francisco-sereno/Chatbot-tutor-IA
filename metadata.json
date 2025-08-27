@@ -1,0 +1,6 @@
+{
+  "name": "Chatbot_Tutor_IA-Fundamentos_de_la_IA",
+  "description": "Un tutor de inteligencia artificial conversacional para el módulo 'Fundamentos de la IA', basado en el modelo Gemini 2.5 Flash de Google. Diseñado para facilitar el aprendizaje de los contenidos del módulo de forma interactiva y precisa.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
