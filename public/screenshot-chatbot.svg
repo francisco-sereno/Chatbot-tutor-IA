@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" width="100%" height="100%">
+  <defs>
+    <style>
+      .font-ui {
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+      .title { font-size: 19px; font-weight: 600; fill: #212529; }
+      .msg-text-bot { font-size: 14.5px; font-weight: 400; fill: #212529; }
+      .msg-text-bot-bold { font-size: 14.5px; font-weight: 600; fill: #212529; }
+      .msg-text-user { font-size: 14.5px; font-weight: 400; fill: #ffffff; }
+      .placeholder { font-size: 14.5px; font-weight: 400; fill: #6c757d; }
+    </style>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="112%">
+      <feDropShadow dx="0" dy="8" stdDeviation="15" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+    <clipPath id="card-clip">
+      <rect x="80" y="32" width="800" height="616" rx="18" ry="18" />
+    </clipPath>
+  </defs>
+
+  <!-- Outer Page Background -->
+  <rect width="960" height="680" fill="#e9ecef" rx="12" ry="12" />
+
+  <!-- Main Chatbot Container Shadow -->
+  <rect x="80" y="32" width="800" height="616" rx="18" ry="18" fill="#ffffff" filter="url(#card-shadow)" />
+
+  <!-- Clipped Interior of Chatbot Container -->
+  <g clip-path="url(#card-clip)" class="font-ui">
+    <!-- Chat Window Background -->
+    <rect x="80" y="32" width="800" height="616" fill="#f8f9fa" />
+
+    <!-- Header -->
+    <rect x="80" y="32" width="800" height="68" fill="#ffffff" />
+    <line x1="80" y1="100" x2="880" y2="100" stroke="#dee2e6" stroke-width="1" />
+
+    <!-- Header Graduation Cap Icon -->
+    <g transform="translate(106, 52)" stroke="#007bff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+      <path d="M6 12v5c0 1.66 4 3 6 3s6-1.34 6-3v-5" />
+    </g>
+
+    <!-- Header Title -->
+    <text x="144" y="73" class="title">Tutor IA: Fundamentos de la IA</text>
+
+    <!-- Credits Info Button -->
+    <g transform="translate(830, 54)" stroke="#6c757d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <line x1="12" y1="16" x2="12" y2="12" />
+      <line x1="12" y1="8" x2="12.01" y2="8" />
+    </g>
+
+    <!-- Scrollbar thumb -->
+    <rect x="870" y="116" width="6" height="140" rx="3" fill="#ced4da" />
+
+    <!-- ================= MESSAGE 1: Initial Bot Greeting ================= -->
+    <g transform="translate(104, 124)">
+      <!-- Bot Avatar -->
+      <circle cx="18" cy="44" r="18" fill="#ffffff" stroke="#dee2e6" stroke-width="1" />
+      <g transform="translate(8, 34) scale(0.833)" stroke="#007bff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+        <path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>
+      </g>
+
+      <!-- Bot Bubble -->
+      <rect x="48" y="0" width="545" height="62" rx="18" ry="18" fill="#e9ecef" />
+      <text x="68" y="27" class="msg-text-bot">
+        Saludos. Soy su tutor de IA para el módulo <tspan class="msg-text-bot-bold">fundamentos de la IA</tspan>.
+      </text>
+      <text x="68" y="48" class="msg-text-bot">
+        Puede realizar consultas sobre sus contenidos.
+      </text>
+    </g>
+
+    <!-- ================= MESSAGE 2: User Question ================= -->
+    <g transform="translate(382, 204)">
+      <rect x="0" y="0" width="474" height="44" rx="18" ry="18" fill="#007bff" />
+      <text x="20" y="27" class="msg-text-user">
+        ¿Cuál es la diferencia entre IA Tradicional e IA Generativa?
+      </text>
+    </g>
+
+    <!-- ================= MESSAGE 3: Bot Detailed Response ================= -->
+    <g transform="translate(104, 266)">
+      <!-- Bot Avatar (aligned at bottom) -->
+      <circle cx="18" cy="144" r="18" fill="#ffffff" stroke="#dee2e6" stroke-width="1" />
+      <g transform="translate(8, 134) scale(0.833)" stroke="#007bff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+        <path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>
+      </g>
+
+      <!-- Bot Bubble -->
+      <rect x="48" y="0" width="600" height="162" rx="18" ry="18" fill="#e9ecef" />
+      <text x="68" y="28" class="msg-text-bot">
+        La diferencia principal radica en su objetivo y capacidad:
+      </text>
+      <text x="68" y="56" class="msg-text-bot">
+        • <tspan class="msg-text-bot-bold">IA Tradicional:</tspan> Se enfoca en analizar y <tspan class="msg-text-bot-bold">clasificar</tspan> datos existentes.
+      </text>
+      <text x="68" y="80" class="msg-text-bot">
+        • <tspan class="msg-text-bot-bold">IA Generativa:</tspan> Tiene la capacidad de <tspan class="msg-text-bot-bold">crear contenido nuevo</tspan> mediante
+      </text>
+      <text x="80" y="102" class="msg-text-bot">
+        modelos de <tspan class="msg-text-bot-bold">predicción estadística</tspan> (como ChatGPT, Claude o Gemini).
+      </text>
+      <text x="68" y="132" class="msg-text-bot">
+        ¿Le interesaría revisar cómo <tspan class="msg-text-bot-bold">Isabella Andrea</tspan> aplica estas herramientas o
+      </text>
+      <text x="68" y="151" class="msg-text-bot">
+        analizar sus limitaciones como las <tspan class="msg-text-bot-bold">alucinaciones</tspan> y <tspan class="msg-text-bot-bold">sesgos</tspan>?
+      </text>
+    </g>
+
+    <!-- ================= MESSAGE 4: User Follow-up ================= -->
+    <g transform="translate(436, 446)">
+      <rect x="0" y="0" width="420" height="44" rx="18" ry="18" fill="#007bff" />
+      <text x="20" y="27" class="msg-text-user">
+        ¿Cuáles son los principios éticos que debemos considerar?
+      </text>
+    </g>
+
+    <!-- ================= MESSAGE 5: Bot Ethics Response ================= -->
+    <g transform="translate(104, 506)">
+      <!-- Bot Avatar -->
+      <circle cx="18" cy="36" r="18" fill="#ffffff" stroke="#dee2e6" stroke-width="1" />
+      <g transform="translate(8, 26) scale(0.833)" stroke="#007bff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+        <path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>
+      </g>
+
+      <!-- Bot Bubble -->
+      <rect x="48" y="0" width="590" height="54" rx="18" ry="18" fill="#e9ecef" />
+      <text x="68" y="24" class="msg-text-bot">
+        El uso responsable requiere aplicar cuatro principios éticos clave:
+      </text>
+      <text x="68" y="44" class="msg-text-bot">
+        <tspan class="msg-text-bot-bold">Transparencia</tspan>, <tspan class="msg-text-bot-bold">Verificación</tspan>, <tspan class="msg-text-bot-bold">Responsabilidad</tspan> y <tspan class="msg-text-bot-bold">Privacidad</tspan>.
+      </text>
+    </g>
+
+    <!-- ================= Bottom Input Area ================= -->
+    <rect x="80" y="572" width="800" height="76" fill="#ffffff" />
+    <line x1="80" y1="572" x2="880" y2="572" stroke="#dee2e6" stroke-width="1" />
+
+    <!-- Text Input Pill -->
+    <rect x="104" y="587" width="694" height="46" rx="23" ry="23" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" />
+    <text x="126" y="615" class="placeholder">Escriba su consulta…</text>
+
+    <!-- Send Button -->
+    <circle cx="833" cy="610" r="23" fill="#007bff" />
+    <g transform="translate(821, 598)" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="22" y1="2" x2="11" y2="13" />
+      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+    </g>
+  </g>
+
+  <!-- Outer Container Border -->
+  <rect x="80" y="32" width="800" height="616" rx="18" ry="18" fill="none" stroke="#dee2e6" stroke-width="1.5" />
+</svg>
